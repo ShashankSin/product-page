@@ -53,18 +53,22 @@ ul {
   position: relative;
 }
 .nav--aboutUs ul {
-  display: none;
   position: absolute;
   text-align: left;
   background-color: #fff;
   width: 15rem;
-  top: 25px;
+  top: 40px;
   left: 0;
-  transition: top 0.5s;
+  opacity: 0;
+  z-index: 1;
+  transition: top 0.5s ease-in-out, display 1s ease-in-out,
+    opacity 0.5s ease-in-out;
+  visibility: hidden;
 }
 .nav--aboutUs:hover ul {
-  display: block;
-  z-index: 1;
+  opacity: 1;
+  top: 25px;
+  visibility: visible;
 }
 .nav--aboutUs ul li {
   border: 1px solid #dedddd;
